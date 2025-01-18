@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap');
+
+
+body {
+  position: relative;
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  padding: 0;
+  background: rgba(240, 230, 255, 0.8);
+  /*background: #f8f9fa url('https://www.transparenttextures.com/patterns/lavender.png');*/
+  background-size: cover;
+  color: #333;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.header {
+  /*background: rgba(240, 230, 255, 0.8);*/
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.8em;
+  font-family: 'Dancing Script', cursive;
+  color: #5a2a83;
+}
+
+.header h2 {
+  margin: 10px 0;
+  font-family: 'Dancing Script', cursive;
+  color: #4a1d6e;
+  font-size: 2.5em;
+}
+
+.details, .message {
+  margin: 20px 0;
+  padding: 15px;
+  /*background: rgba(255, 255, 255, 0.5);*/
+  border-radius: 8px;
+  font-family: 'Dancing Script', cursive;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.message {
+  font-size: 25px;
+}
+
+.details h3 {
+  margin-bottom: 10px;
+  color: #444;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+}
+
+.details p {
+  font-family: 'Merriweather', serif;
+  /*font-size: 1em;*/
+}
+.details{
+  background-color: rgb(191, 173, 204, 0.5);
+}
+
+.footer {
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #666;
+  font-family: 'Merriweather', serif;
+}
+
+
+/* Positioning the images in the left and right top corners */
+.top-left-image,
+.top-right-image {
+  position: absolute;
+  top: 0;
+  width: 400px; /* Default width, you can adjust this */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image scales without distortion */
+}
+
+.top-left-image {
+  left: 0;
+}
+
+.top-right-image {
+  right: 0;
+}
+
+/* Use media queries to adjust the size and position of the images on smaller screens */
+@media (max-width: 768px) {
+  .top-left-image,
+  .top-right-image {
+    width: 125px; /* Smaller size on tablets and below */
+  }
+}
+
+@media (max-width: 480px) {
+  .top-left-image,
+  .top-right-image {
+    width: 125px; /* Even smaller size on mobile devices */
+  }
+}
+
+/* Optionally, you can set a z-index if needed */
+.top-left-image,
+.top-right-image {
+  z-index: -1; /* Ensure they are behind the content */
+}
+
+/* Example styles for container and content */
+.container {
+  position: relative;
+  z-index: 1; /* Ensure the content appears above the images */
+}
+/* Container to hold both buttons */
+.toggle-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+/* Style for language toggle button */
+.language-toggle {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Style for sound toggle button */
+.sound-toggle {
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #de23fe;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+
+.sound-toggle:hover {
+  background: rgba(255, 255, 255, 0.8); /* Lighter background on hover */
+  color: #333; /* Darker icon color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.language-toggle:hover {
+  background: rgba(255, 255, 255, 0.8); /* Lighter background on hover */
+  color: #333; /* Darker icon color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .sound-toggle {
+    width: 20px; /* Smaller button */
+    height: 20px;
+    font-size: 12px; /* Smaller icon */
+    bottom: 10px; /* Adjust position */
+    right: 10px;
+  }
+  .language-toggle {
+    width: 20px; /* Smaller button */
+    height: 20px;
+    font-size: 12px; /* Smaller icon */
+    bottom: 10px; /* Adjust position */
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sound-toggle {
+    width: 20px; /* Even smaller button */
+    height: 20px;
+    font-size: 12px; /* Smaller icon */
+    bottom: 10px; /* Adjust position */
+    right: 10px;
+  }
+  .language-toggle {
+    width: 20px; /* Smaller button */
+    height: 20px;
+    font-size: 12px; /* Smaller icon */
+    bottom: 10px; /* Adjust position */
+    right: 10px;
+  }
+}

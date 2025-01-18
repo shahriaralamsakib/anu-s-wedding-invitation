@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/js/sakura.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Anu's Wedding Invitation</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="%PUBLIC_URL%/js/sakura.min.js"></script>
+    <script>
+      var sakura = new Sakura('body', {
+        maxSize: 18,
+        colors: [
+    {
+        gradientColorStart: 'rgba(186, 85, 211, 0.9)', // Light violet
+        gradientColorEnd: 'rgba(148, 0, 211, 0.9)',   // Dark violet
+        gradientColorDegree: 120,
+    },
+    {
+        gradientColorStart: 'rgba(138, 43, 226, 0.9)', // Medium violet
+        gradientColorEnd: 'rgba(75, 0, 130, 0.9)',    // Indigo
+        gradientColorDegree: 120,
+    },
+    {
+        gradientColorStart: 'rgba(221, 160, 221, 0.9)', // Lavender
+        gradientColorEnd: 'rgba(153, 50, 204, 0.9)',   // Dark orchid
+        gradientColorDegree: 120,
+    },
+],
+    lifeTime: 4500
+    });
+    </script>
+
+  </body>
+</html>
